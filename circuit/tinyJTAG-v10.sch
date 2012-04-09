@@ -120,6 +120,7 @@
 <layer number="222" name="222bmp" color="23" fill="1" visible="no" active="no"/>
 <layer number="223" name="223bmp" color="24" fill="1" visible="no" active="no"/>
 <layer number="224" name="224bmp" color="25" fill="1" visible="no" active="no"/>
+<layer number="250" name="Descript" color="3" fill="1" visible="no" active="no"/>
 <layer number="251" name="SMDround" color="12" fill="11" visible="no" active="no"/>
 <layer number="254" name="cooling" color="7" fill="1" visible="yes" active="yes"/>
 </layers>
@@ -680,6 +681,11 @@ chip</description>
 <text x="8.89" y="-1.27" size="0.8128" layer="25">&gt;NAME</text>
 <text x="0" y="-1.27" size="0.8128" layer="27">&gt;VALUE</text>
 </package>
+<package name="CREATIVE_COMMONS">
+<text x="-20.32" y="5.08" size="1.778" layer="27">Released under the Creative Commons Attribution Share-Alike 3.0 License</text>
+<text x="0" y="2.54" size="1.778" layer="27">http://creativecommons.org/licenses/by-sa/3.0</text>
+<text x="11.43" y="0" size="1.778" layer="27">Designed by:</text>
+</package>
 </packages>
 <symbols>
 <symbol name="LETTER_L">
@@ -762,6 +768,11 @@ chip</description>
 <pin name="D-" x="-2.54" y="5.08" visible="pad" length="short"/>
 <pin name="VBUS" x="-2.54" y="2.54" visible="pad" length="short"/>
 <pin name="GND" x="-2.54" y="0" visible="pad" length="short"/>
+</symbol>
+<symbol name="CREATIVE_COMMONS">
+<text x="0" y="5.08" size="1.778" layer="95">Released under the Creative Commons Attribution Share-Alike 3.0 License</text>
+<text x="0" y="2.54" size="1.778" layer="95">http://creativecommons.org/licenses/by-sa/3.0</text>
+<text x="0" y="0" size="1.778" layer="95">Design by:</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -1069,6 +1080,18 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <connect gate="G$1" pin="GND" pad="GND"/>
 <connect gate="G$1" pin="VBUS" pad="VBUS"/>
 </connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="CREATIVE_COMMONS">
+<gates>
+<gate name="G$1" symbol="CREATIVE_COMMONS" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="CREATIVE_COMMONS">
 <technologies>
 <technology name=""/>
 </technologies>
@@ -6038,11 +6061,12 @@ Source: AVX .. aphvc.pdf</description>
 <part name="Q2" library="transistor-pnp" deviceset="MMBT3906*" device="SMD" technology="LT1"/>
 <part name="R5" library="SparkFun" deviceset="RESISTOR" device="0603-RES"/>
 <part name="C2" library="rcl" deviceset="C-EU" device="C0805" value="10uF"/>
+<part name="U$4" library="SparkFun" deviceset="CREATIVE_COMMONS" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
-<text x="17.78" y="7.62" size="1.778" layer="97">Objective Development</text>
+<text x="20.32" y="7.62" size="1.778" layer="97">Objective Development</text>
 <text x="2.54" y="5.08" size="1.778" layer="97">Altered by SparkFun Electronics (Ryan Owens)</text>
 <text x="2.54" y="2.54" size="1.778" layer="97">Altered by Embedded Creations (Louis Beaudoin)</text>
 </plain>
@@ -6094,6 +6118,7 @@ Source: AVX .. aphvc.pdf</description>
 <instance part="Q2" gate="G$1" x="144.78" y="53.34"/>
 <instance part="R5" gate="G$1" x="134.62" y="53.34" rot="R180"/>
 <instance part="C2" gate="G$1" x="233.68" y="167.64"/>
+<instance part="U$4" gate="G$1" x="2.54" y="7.62"/>
 </instances>
 <busses>
 </busses>
