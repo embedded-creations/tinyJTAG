@@ -54,7 +54,7 @@ Firmware:
 For more information on the tinyJTAG programmer, please visit the
 following URL:
 
-http://www.embeddded-creations.com
+http://www.embedded-creations.com
 
 (c) 2012 Louis Beaudoin
 
